@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'LandingController');
+
+Auth::routes(['verify' => true]);
+
+Route::get('dashboard', 'DashboardController')->name('dashboard')->middleware('verified');
